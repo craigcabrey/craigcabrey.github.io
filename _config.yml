@@ -1,0 +1,54 @@
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+gems:
+  - jemoji
+  
+# Site settings
+title: "/home/craigcabrey"
+description: > # this means to ignore newlines until "email:"
+   My slice of the internet pie.
+
+email: craigcabrey@gmail.com
+#blog logo
+logo: "/assets/images/avatar.jpg"
+# blog cover
+cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
+
+name: 'Craig Cabrey'
+author: 'Craig Cabrey'
+author_image: "/assets/images/avatar.jpg"
+
+paginate:	5
+
+url: "http://craigcabrey.com" # the base hostname & protocol for your site
+baseurl: ""
+#used to display twitter cards
+twitter_handle: '@craigcabrey'
+
+#fill in disqus shortname to use disqus
+#disqus: disqus-shortname
+
+# social icons and sharing options
+social:
+
+  - icon:	facebook
+    url:	https://facebook.com/craigcabrey
+    desc:   Connect with me facebook
+#    share_url: https://www.facebook.com/sharer.php
+#    share_title: ?t=
+#    share_link: "&amp;u="
+
+  - icon:	github
+    url:	https://github.com/craigcabrey
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+
+#  - icon:	google-plus
+#    url:	https://google.com/???
+#    desc:	Add me on google+
+#    share_url:
+#    share_title:
+#    share_link:
