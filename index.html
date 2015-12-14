@@ -10,7 +10,7 @@ layout: default
 
 <header class="blog-header">
   {% if site.logo %}
-    <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">
+    <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.author_image }}')">
       {{ site.title }}
     </a>
   {% endif %}
@@ -26,6 +26,10 @@ layout: default
       {% endif %}
     {% endfor %}
     <a href="/about/">About</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="/projects/">Projects</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="/assets/resume.pdf">Resume</a>
   </div>
 </header>
 
