@@ -10,7 +10,7 @@ layout: default
 
 <header class="blog-header">
   {% if site.logo %}
-    <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.author_image }}')">
+    <a class="blog-logo" href="/" style="background-image: url('{{ site.author_image }}')">
       {{ site.title }}
     </a>
   {% endif %}
@@ -19,7 +19,8 @@ layout: default
   <div class="custom-links">
     {% for social in site.social %}
       {% if social.url %}
-        <a class="icon-{{ social.icon }}" href="{{ social.url }}" {% if social.desc %} title="{{ social.desc }}"{% endif %}">
+        <a class="icon-{{ social.icon }}"
+           href="{{ social.url }}" {% if social.desc %} title="{{ social.desc }}"{% endif %}">
           <i class="fa fa-{{ social.icon }}"></i>
         </a>
         &nbsp;&nbsp;·&nbsp;&nbsp;
@@ -44,14 +45,25 @@ layout: default
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+              <h2 class="post-title" itemprop="name">
+                <a href="{{ post.url }}" itemprop="url">{{ post.title }}</a>
+              </h2>
             </header>
             <section class="post-excerpt" itemprop="description">
               <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
             </section>
             <div class="post-meta">
-              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-  <!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
+              <time datetime="{{ post.date | date_to_long_string }}">
+                {{ post.date | date_to_long_string }}
+              </time>
+              <!-- <span class="post-tags-set">
+                on {{#foreach tags}}
+                <span class="post-tag-{{slug}}">
+                  {{#if @first}}{{else}}, {{/if}}
+                  <a href="/tag/{{slug}}">{{name}}</a>
+                </span>
+                {{/foreach}}
+              </span> -->
             </div>
           </div>
         </article>
@@ -66,11 +78,24 @@ layout: default
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+              <h2 class="post-title" itemprop="name">
+                <a href="{{ post.url }}" itemprop="url">
+                  {{ post.title }}
+                </a>
+              </h2>
             </header>
             <div class="post-meta">
-              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-<!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
+              <time datetime="{{ post.date | date_to_long_string }}">
+                {{ post.date | date_to_long_string }}
+              </time>
+              <!-- <span class="post-tags-set">
+                on {{#foreach tags}}
+                <span class="post-tag-{{slug}}">
+                  {{#if @first}}{{else}}, {{/if}}
+                  <a href="/tag/{{slug}}">{{name}}</a>
+                </span>
+                {{/foreach}}
+              </span> -->
             </div>
           </div>
         </article>
@@ -79,16 +104,22 @@ layout: default
 
     <nav class="pagination" role="navigation">
       {% if paginator.next_page %}
-        <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
+        <a class="newer-posts" href="/page{{paginator.next_page}}">
+          &larr; Older posts
+        </a>
       {% endif %}
       {% if paginator.total_pages > 1 %}
-      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      <span class="page-number">
+        Page {{ paginator.page }} of {{ paginator.total_pages }}
+      </span>
       {% endif %}
       {% if paginator.previous_page %}
         {% if paginator.page == 2 %}
           <a class="older-posts" href="/">Newer posts &rarr;</a>
         {% else %}
-          <a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
+          <a class="older-posts" href="/page{{paginator.previous_page}}">
+            Newer posts &rarr;
+          </a>
         {% endif %}
       {% endif %}
     </nav>
