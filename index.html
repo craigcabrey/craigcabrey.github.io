@@ -77,6 +77,36 @@ layout: default
       {% for post in paginator.posts %}
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
+            {% if post.tags contains 'link' %}
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name">
+                <a href="{{ post.link }}" itemprop="url">
+                  {{ post.title }}
+                </a>
+              </h2>
+            </header>
+            {% if post.content != blank %}
+            <section class="post-excerpt" itemprop="description">
+              <p>
+                {{ post.content }}
+              </p>
+            </section>
+            {% endif %}
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_long_string }}">
+                <i class="fa fa-external-link"></i>
+                {{ post.date | date_to_long_string }}
+              </time>
+              <!-- <span class="post-tags-set">
+                on {{#foreach tags}}
+                <span class="post-tag-{{slug}}">
+                  {{#if @first}}{{else}}, {{/if}}
+                  <a href="/tag/{{slug}}">{{name}}</a>
+                </span>
+                {{/foreach}}
+              </span> -->
+            </div>
+            {% else %}
             <header class="post-header">
               <h2 class="post-title" itemprop="name">
                 <a href="{{ post.url }}" itemprop="url">
@@ -97,6 +127,7 @@ layout: default
                 {{/foreach}}
               </span> -->
             </div>
+            {% endif %%}
           </div>
         </article>
       {% endfor %}
