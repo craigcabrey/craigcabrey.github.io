@@ -3,14 +3,16 @@ layout: default
 ---
 
 <div class="teaserimage">
-  <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.cover }})"{% endif %}>
+  <div class="teaserimage-image"
+       style="background-image: url({{ site.cover }})">
     Teaser Image
   </div>
 </div>
 
 <header class="blog-header">
   {% if site.logo %}
-    <a class="blog-logo" href="/" style="background-image: url('{{ site.author_image }}')">
+    <a class="blog-logo" href="/"
+       style="background-image: url('{{ site.author_image }}')">
       {{ site.title }}
     </a>
   {% endif %}
@@ -20,7 +22,8 @@ layout: default
     {% for social in site.social %}
       {% if social.url %}
         <a class="icon-{{ social.icon }}"
-           href="{{ social.url }}" {% if social.desc %} title="{{ social.desc }}"{% endif %}">
+           href="{{ social.url }}"
+           {% if social.desc %} title="{{ social.desc }}"{% endif %}">
           <i class="fa fa-{{ social.icon }}"></i>
         </a>
         &nbsp;&nbsp;·&nbsp;&nbsp;
@@ -34,7 +37,6 @@ layout: default
   </div>
 </header>
 
-
 <main class="content" role="main">
 
     {% if site.tags.featured %}
@@ -42,7 +44,8 @@ layout: default
 
     <div class="container featured">
       {% for post in site.tags.featured %}
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+        <article class="post" itemscope
+                 itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
               <h2 class="post-title" itemprop="name">
@@ -75,7 +78,8 @@ layout: default
 
     <div class="cf frame">
       {% for post in paginator.posts %}
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+        <article class="post" itemscope
+                 itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             {% if post.tags contains 'link' %}
             <header class="post-header">
@@ -155,8 +159,5 @@ layout: default
       {% endif %}
     </nav>
 
-
-    <!-- {{!! After all the posts, we have the previous/next pagination links }}
-    {{pagination}} -->
-
 </main>
+
