@@ -20,7 +20,8 @@
       });
       $window.trigger('scroll');
 
-      var height = $('.article-image').height();
+      // add 31 to offset the first header from the article image
+      var height = $('.article-image').height() + 31;
       $('.post-content').css('padding-top', height + 'px');
 
       $('a[href*=#]:not([href=#])').click(function() {
