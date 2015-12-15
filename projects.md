@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+image: /assets/images/blueprint.png
 permalink: /projects/
 ---
 
