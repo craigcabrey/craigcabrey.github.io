@@ -84,7 +84,7 @@ layout: default
             {% if post.tags contains 'link' %}
             <header class="post-header">
               <h2 class="post-title" itemprop="name">
-                <a href="{{ post.link }}" itemprop="url">
+                <a href="{{ post.link }}" itemprop="url" target="_blank">
                   {{ post.title }}
                 </a>
               </h2>
@@ -98,7 +98,7 @@ layout: default
             {% endif %}
             <div class="post-meta">
               <time datetime="{{ post.date | date_to_long_string }}">
-                <i class="fa fa-external-link"></i>
+                <i class="fa fa-external-link" title="External Link"></i>
                 {{ post.date | date_to_long_string }}
               </time>
               <!-- <span class="post-tags-set">
@@ -120,6 +120,7 @@ layout: default
             </header>
             <div class="post-meta">
               <time datetime="{{ post.date | date_to_long_string }}">
+                <i class="fa fa-newspaper-o" title="Article"></i>
                 {{ post.date | date_to_long_string }}
               </time>
               <!-- <span class="post-tags-set">
