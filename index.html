@@ -118,6 +118,13 @@ layout: default
                 </a>
               </h2>
             </header>
+            {% if post.description != blank %}
+            <section class="post-excerpt" itemprop="description">
+              <p>
+                {{ post.description}}
+              </p>
+            </section>
+            {% endif %}
             <div class="post-meta">
               <time datetime="{{ post.date | date_to_long_string }}">
                 <i class="fa fa-newspaper-o" title="Article"></i>
