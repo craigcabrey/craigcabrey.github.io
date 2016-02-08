@@ -1,8 +1,9 @@
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 gems:
   - jemoji
+  - jekyll-paginate
   
 # Site settings
 title: "/home/craigcabrey"
