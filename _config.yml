@@ -47,6 +47,10 @@ social:
     share_title:
     share_link:
 
+  - icon:  rss
+    url:   http://craigcabrey.com/feed.xml
+    desc:  Subscribe
+
 #  - icon:	google-plus
 #    url:	https://google.com/???
 #    desc:	Add me on google+
