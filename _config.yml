@@ -6,9 +6,9 @@ gems:
   - jekyll-paginate
   
 # Site settings
-title: "/home/craigcabrey"
+title: "freedom's frontier"
 description: > # this means to ignore newlines until "email:"
-   My slice of the internet pie.
+   commentary on all things libre (among other things)
 
 email: craigcabrey@gmail.com
 #blog logo
