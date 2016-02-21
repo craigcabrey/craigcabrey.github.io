@@ -12,9 +12,9 @@ broke the bank. He was also looking to move away from Ubuntu, so I suggested
 Fedora as the next logical step.
 
 As I was showing him around GNOME Shell, he asked for some functionality that
-wasn't baked in by default. I pointed him towards extensions and showed him the
+wasn't baked in by default. I pointed him towards extensions and showed
 [Auto Move Windows](https://extensions.gnome.org/extension/16/auto-move-windows/)
-one in particular. He wanted to automatically pin the Terminal to a specific
+in particular. He wanted to automatically pin the Terminal to a specific
 workspace.
 
 However, there was a problem. Terminal, along with a whole host of other apps,
